@@ -1,0 +1,77 @@
+:root {
+  --active-progress-color: blueviolet;
+  --inactive-progress-color: grey;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px;
+  width: 350px;
+  position: relative;
+}
+
+.progress-container::before {
+  content: "";
+  border: 1px solid var(--inactive-progress-color);
+  position: absolute;
+  width: 99%;
+  z-index: -1;
+}
+
+.progress {
+  border: 1px solid var(--active-progress-color);
+  position: absolute;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  border: 1.5px solid var(--inactive-progress-color);
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border: 1.5px solid var(--active-progress-color);
+}
+
+button {
+  background-color: white;
+  border: 1.5px solid var(--active-progress-color);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scaleX(0.9);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  border: 1.5px solid var(--inactive-progress-color);
+}
