@@ -30,4 +30,5 @@ body {
 
 .panel.active {
     flex: 0.4;
+    transition: 1s ease-in;
 }
