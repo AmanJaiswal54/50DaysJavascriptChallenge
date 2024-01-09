@@ -5,3 +5,4 @@
 3) Progress Steps
 4) Blurry Loading
 5) Hidden Search Widget
+6) 
