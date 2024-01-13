@@ -4,3 +4,5 @@
 2) Expanding Cards
 3) Progress Steps
 4) Blurry Loading
+5) Hidden Search Widget
+6) Stock Chart
