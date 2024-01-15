@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    position: absolute;
+}
+
+.card {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: bisque;
+    border: 1px solid gray;
+    border-radius: 20px;
+    transition: transform 1s ease;
+}
+.card:nth-of-type(even) {
+    transform: translateY(0vh);
+    /* opacity: 0; */
+}
+.card:nth-of-type(odd) {
+    transform: translateY(80vh);
+    /* opacity: 0; */
+}
+.card.show {
+    transform: translateY(40vh);
+    /* opacity: 1; */
+}
