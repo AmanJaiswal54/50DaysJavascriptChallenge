@@ -6,3 +6,5 @@
 4) Blurry Loading
 5) Hidden Search Widget
 6) Stock Chart
+7) Create Virtual DOM to prevent reflow
+8) 
