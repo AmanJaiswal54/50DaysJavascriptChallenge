@@ -8,4 +8,4 @@
 6) Stock Chart
 7) Create Virtual DOM to prevent reflow
 8) Scroll Animation
-9) 
+9) Notification
