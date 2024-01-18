@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #e1e1e1;
+  position: relative;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 15px;
+  border: 1px solid #555;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.toast {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 15px;
+  border: 1px solid #555;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.toast.success {
+  color: green;
+  border: 1px solid green;
+}
+
+.toast.error {
+  color: red;
+  border: 1px solid red;
+}
