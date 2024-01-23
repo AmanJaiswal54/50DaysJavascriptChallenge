@@ -11,3 +11,4 @@
 9) Notification
 10) Key Itentifier
 11) Key Identifier Sound
+12) Wave Form Animation
