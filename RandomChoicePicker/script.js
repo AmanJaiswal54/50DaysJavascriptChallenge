@@ -1,4 +1,4 @@
-const TOTAL_TIMES_ANIMATION_RUN = 50;
+const TOTAL_TIMES_ANIMATION_RUN = 30;
 
 const textarea = document.getElementById("textarea");
 const tags = document.getElementById("tags");
@@ -14,9 +14,10 @@ textarea.addEventListener("keyup", (e) => {
       }, i * 200);
     }
 
-    // final selected Value
+    // final selected value
     setTimeout(() => {
       let selectedTag = getRandomTag();
+      console.log("selectedTag", selectedTag);
       addActiveClass(selectedTag);
     }, TOTAL_TIMES_ANIMATION_RUN * 200);
   }
