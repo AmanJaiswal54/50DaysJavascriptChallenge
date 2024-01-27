@@ -1,20 +1,33 @@
+const TOTAL_TIMES_ANIMATION_RUN = 50;
+
 const textarea = document.getElementById("textarea");
 const tags = document.getElementById("tags");
 
 textarea.addEventListener("keyup", (e) => {
   let strArray = getStringArray(e.target.value);
   tags.innerHTML = createTags(strArray);
-  console.log('tags.innerHTML', tags.innerHTML);
   if (e.key === "Enter") {
     e.target.value = "";
-    showAnimation();
+    for (let i = 0; i < TOTAL_TIMES_ANIMATION_RUN; i++) {
+      setTimeout(() => {
+        showRandomAnimation();
+      }, i * 200);
+    }
+
+    // final selected Value
+    setTimeout(() => {
+      let selectedTag = getRandomTag();
+      addActiveClass(selectedTag);
+    }, TOTAL_TIMES_ANIMATION_RUN * 200);
   }
 });
 
 function createTags(strArray) {
-  return strArray.map((str) => {
-    return `<span class="tag">${str}</span>`
-  }).join('');
+  return strArray
+    .map((str) => {
+      return `<span class="tag">${str}</span>`;
+    })
+    .join("");
 }
 
 function getStringArray(value) {
@@ -31,25 +44,20 @@ function getStringArray(value) {
     });
 }
 
-function showAnimation() {
-  let timer = 1000;
+function showRandomAnimation() {
+  let selectedTag = getRandomTag();
+  setTimeout(() => {
+    addActiveClass(selectedTag);
+  }, 10);
+
+  setTimeout(() => {
+    removeActiveClass(selectedTag);
+  }, 200);
+}
+
+function getRandomTag() {
   const tag = document.querySelectorAll(".tag");
-
-  let interval = setInterval(() => {
-    let selectedTag = tag[Math.floor(Math.random() * tag.length)];
-    timer--;
-    setTimeout(() => {
-      addActiveClass(selectedTag);
-    }, 2000);
-
-    setTimeout(() => {
-      removeActiveClass(selectedTag);
-    }, 1000);
-  }, 3000);
-
-  if (timer <= 0) {
-    clearInterval(interval);
-  }
+  return tag[Math.floor(Math.random() * tag.length)];
 }
 
 function addActiveClass(selectedTag) {
