@@ -3,19 +3,18 @@ const tags = document.getElementById("tags");
 
 textarea.addEventListener("keyup", (e) => {
   let strArray = getStringArray(e.target.value);
-  createTags(strArray);
-
+  tags.innerHTML = createTags(strArray);
+  console.log('tags.innerHTML', tags.innerHTML);
   if (e.key === "Enter") {
     e.target.value = "";
-    // showAnimation();
+    showAnimation();
   }
 });
 
 function createTags(strArray) {
-  console.log("strArray", strArray);
-  tags.innerHTML = `${strArray.map((str) => {
-    return `<span class="tag">${str}</span>`;
-  })}`;
+  return strArray.map((str) => {
+    return `<span class="tag">${str}</span>`
+  }).join('');
 }
 
 function getStringArray(value) {
@@ -32,26 +31,26 @@ function getStringArray(value) {
     });
 }
 
-// function showAnimation() {
-//   let timer = 1000;
-//   const tag = document.querySelectorAll(".tag");
+function showAnimation() {
+  let timer = 1000;
+  const tag = document.querySelectorAll(".tag");
 
-//   let interval = setInterval(() => {
-//     let selectedTag = tag[Math.floor(Math.random() * tag.length)];
-//     timer--;
-//     setTimeout(() => {
-//       addActiveClass(selectedTag);
-//     }, 2000);
+  let interval = setInterval(() => {
+    let selectedTag = tag[Math.floor(Math.random() * tag.length)];
+    timer--;
+    setTimeout(() => {
+      addActiveClass(selectedTag);
+    }, 2000);
 
-//     setTimeout(() => {
-//       removeActiveClass(selectedTag);
-//     }, 1000);
-//   }, 3000);
+    setTimeout(() => {
+      removeActiveClass(selectedTag);
+    }, 1000);
+  }, 3000);
 
-//   if (timer <= 0) {
-//     clearInterval(interval);
-//   }
-// }
+  if (timer <= 0) {
+    clearInterval(interval);
+  }
+}
 
 function addActiveClass(selectedTag) {
   selectedTag.classList.add("active");
