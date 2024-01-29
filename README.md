@@ -13,4 +13,4 @@
 11) Key Identifier Sound
 12) Wave Form Animation
 13) Random Choice Picker With Animation
-14) 
+14) Frequently Asked Questions (FAQ)
