@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 1s ease;
+}
+
+.container.active {
+    background-color: gray;
+}
+
+.btn {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.container.active .btn {
+    background-color: beige;
+    color: black;
+}
+
+.btn:hover {
+    outline: none;
+    filter: drop-shadow(2px 2px 5px rgb(61, 57, 57));
+}
+
+.container.active .btn:hover {
+    filter: drop-shadow(2px 2px 5px rgb(205, 205, 179));
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
