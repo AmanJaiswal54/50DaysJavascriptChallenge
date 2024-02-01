@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.rect {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
