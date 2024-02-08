@@ -16,4 +16,4 @@
 14) Frequently Asked Questions (FAQ)
 15) Dark Light Mode with Button and Toggle
 16) Mouse Animation - translate div to mouse click position
-17) Dummy
+17) Write Prototype methods for string, array and Object
