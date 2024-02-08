@@ -80,3 +80,19 @@ Object.setPrototypeOf(obj5, obj2);
 
 // ------------------------------------------------------------------------------------------
 
+
+// Constructor Function
+
+function Parent (name) {
+    this.name = name;
+    this.getTrimmedNameInstance = function () {
+        return this.name.trim();
+    }
+}
+Parent.prototype.getTrimmedName = function () {
+    return this.name.trim();
+}
+
+let child1 = new Parent(`    Vaibhav`);
+// console.log('child1', child1);
+// child1.getTrimmedName();
