@@ -16,4 +16,6 @@
 14) Frequently Asked Questions (FAQ)
 15) Dark Light Mode with Button and Toggle
 16) Mouse Animation - translate div to mouse click position
-17) **a)** Write our own Prototype methods for string, array and Object **b)**  How to add/insert our own object in between prototype chain
+17) **a)** Write our own Prototype methods for string, array and Object
+    **b)**  How to add/insert our own object in between prototype chain
+    **c)** Created Constructor Function, Classes and Classes Inheritance
