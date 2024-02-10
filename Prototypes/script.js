@@ -140,6 +140,10 @@ class ChildClass extends ParentClassInheritance{
   getFullNameInstance2 = function () {
     return `${this.firstName.trim()} ${this.lastName.trim()}`;
   };
+
+  static getFullNameInstance2 = function () {
+    return `${ParentClassInheritance.prototype.anotherName.trim()}`;
+  };
 }
 
 ChildClass.prototype.getFullName = function () {
