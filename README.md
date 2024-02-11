@@ -19,3 +19,4 @@
 17) **a)** Write our own Prototype methods for string, array and Object
     **b)**  How to add/insert our own object in between prototype chain
     **c)** Created Constructor Function, Classes and Classes Inheritance
+18) Drag N Drop Circle using DragnDrop events (events:- dragstart, dragend, dragenter, dragleave, dragover, drop)
