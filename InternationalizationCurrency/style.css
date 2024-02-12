@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  margin: 30px;
+}
+
+.lang,
+.price {
+  height: 45px;
+  font-size: 16px;
+  border: 1px solid orange;
+  outline: none;
+}
+
+.submit {
+  width: 50%;
+  background-color: darkorange;
+  color: white;
+  text-align: center;
+  border: 1px solid chocolate;
+  font-size: 24px;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+.submit:active,
+.submit:focus {
+  transform: scale(0.95);
+}
