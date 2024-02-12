@@ -20,3 +20,4 @@
     **b)**  How to add/insert our own object in between prototype chain
     **c)** Created Constructor Function, Classes and Classes Inheritance
 18) Drag N Drop Circle using DragnDrop events (events:- dragstart, dragend, dragenter, dragleave, dragover, drop)
+19) Internationalization - Format Number to Currency
