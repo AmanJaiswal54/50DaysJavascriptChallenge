@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.button {
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+    margin: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border: 5px solid darkgray;
+}
+
+.button:focus, .button:active {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
