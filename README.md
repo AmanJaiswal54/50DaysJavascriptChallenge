@@ -21,4 +21,4 @@
     **c)** Created Constructor Function, Classes and Classes Inheritance
 18) Drag N Drop Circle using DragnDrop events (events:- dragstart, dragend, dragenter, dragleave, dragover, drop)
 19) Internationalization - Format Number to Currency
-20) 
+20) WebWorkers
