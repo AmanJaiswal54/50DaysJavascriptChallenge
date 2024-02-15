@@ -22,3 +22,4 @@
 18) Drag N Drop Circle using DragnDrop events (events:- dragstart, dragend, dragenter, dragleave, dragover, drop)
 19) Internationalization - Format Number to Currency
 20) WebWorkers
+21) Created our own Double Clicked Event
