@@ -89,13 +89,68 @@ console.log("reduceInbuiltOutput", reduceInbuiltOutput);
 Array.prototype.reducePolyfillOutput = function (cb, acc = 0) {
   let sum = acc;
   for (let i = 0; i < this.length; i++) {
-    sum = sum + this[i]
+    sum = sum + this[i];
   }
   return sum;
 };
 
 let reduceOutput = inputReduceArray.reducePolyfillOutput((acc, num) => {
-    return acc + num;
+  return acc + num;
 }, 10);
 
 console.log("reducePolyfillOutput", reduceOutput);
+
+// EVERY Higher Order Function
+
+let inputEveryArray = [0, 1, 4, 9, 16, 25];
+console.log("inputEveryArray", inputEveryArray);
+
+let everyInbuiltOutput = inputEveryArray.every((num, index) => {
+  return num === Math.pow(index, 2);
+});
+
+console.log("everyInbuiltOutput", everyInbuiltOutput);
+
+Array.prototype.everyPolyfillOutput = function (cb) {
+  let result = true;
+  for (let i = 0; i < this.length; i++) {
+    if (!cb(this[i], i)) {
+      result = false;
+      return result;
+    }
+  }
+  return result;
+};
+
+let everyOutput = inputEveryArray.everyPolyfillOutput((num, index) => {
+  return num === Math.pow(index, 2);
+});
+
+console.log("everyPolyfillOutput", everyOutput);
+
+// SOME Higher Order Function
+
+let inputSomeArray = [0, 1, 4, 9, 16, 25, 28];
+console.log("inputSomeArray", inputSomeArray);
+
+let someInbuiltOutput = inputSomeArray.some((num, index) => {
+  return num !== Math.pow(index, 2);
+});
+
+console.log("someInbuiltOutput", someInbuiltOutput);
+
+Array.prototype.somePolyfillOutput = function (cb) {
+  let result = false;
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i], i)) {
+      result = true;
+    }
+  }
+  return result;
+};
+
+let someOutput = inputSomeArray.somePolyfillOutput((num, index) => {
+  return num !== Math.pow(index, 2);
+});
+
+console.log("somePolyfillOutput", someOutput);
