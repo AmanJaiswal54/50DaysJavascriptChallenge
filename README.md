@@ -26,3 +26,4 @@
 22) Created our own Double Clicked Event and show animation inside a div to understand browser properties
 23) Array Function Polyfills - map, find, filter, reduce, every, some
 24) Kinetic Animation Loader
+25) Social Media Increment Counter
