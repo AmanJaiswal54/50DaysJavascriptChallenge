@@ -27,3 +27,4 @@
 23) Array Function Polyfills - map, find, filter, reduce, every, some
 24) Kinetic Animation Loader
 25) Social Media Increment Counter
+26) Closures
