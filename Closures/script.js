@@ -102,17 +102,26 @@ function sum(...args1) {
 }
 sum(1)(2, 3)(4, 5, 6)();
 
-
 // vs
 // without empty parenthesis
 
-function add(a){
-  function sum(b){
-     a =   a+b;
-     return sum;
+function add(a) {
+  function sum(b) {
+    a = a + b;
+    return sum;
   }
-  sum.getValue = function(){return a;}
+  sum.getValue = function () {
+    return a;
+  };
   return sum;
- }
- console.log(add(1)(2)(3)(4));
- console.log(add(1)(2)(3)(4).getValue());
+}
+console.log(add(1)(2)(3)(4));
+console.log(add(1)(2)(3)(4).getValue());
+
+
+// how to avoid memory leaks
+// https://dev.to/satishrajnale/question-16-javascript-in-depth-4-types-of-common-memory-leaks-and-how-to-avoid-13fd
+
+
+// Currying via Closures Questions
+// https://theanubhav.com/2019/02/03/js-currying-in-interview/#add234-and-add234-usage-in-same-function
