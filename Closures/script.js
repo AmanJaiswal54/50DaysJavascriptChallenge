@@ -29,6 +29,7 @@ function outer() {
     console.log(a, b, c);
   }
   a = 2;
+  // b = 11;
   c = 22;
 
   return inner;
@@ -41,6 +42,8 @@ outer()();
 
 // Difference between
 
+// all parameters in single parenthesis
+
 function multiply() {
   console.log("arguments", arguments);
   let total = 1;
@@ -52,6 +55,7 @@ function multiply() {
 multiply(1, 2, 3, 4, 5);
 
 // vs
+// with empty parenthesis and 1 parameter
 
 function multiply(x) {
   return function (y) {
@@ -65,6 +69,7 @@ function multiply(x) {
 multiply(1)(2)(3)(4)(5)();
 
 // vs
+// with empty parenthesis and 1 parameter
 
 function sum(x) {
   return function (y) {
@@ -78,6 +83,7 @@ function sum(x) {
 sum(1)(2)(3)(0)(5)();
 
 // vs
+// with empty parenthesis and multiple parameters
 
 function sum(...args1) {
   let sum1 = args1.reduce((acc, arg) => {
@@ -95,3 +101,18 @@ function sum(...args1) {
   };
 }
 sum(1)(2, 3)(4, 5, 6)();
+
+
+// vs
+// without empty parenthesis
+
+function add(a){
+  function sum(b){
+     a =   a+b;
+     return sum;
+  }
+  sum.getValue = function(){return a;}
+  return sum;
+ }
+ console.log(add(1)(2)(3)(4));
+ console.log(add(1)(2)(3)(4).getValue());
