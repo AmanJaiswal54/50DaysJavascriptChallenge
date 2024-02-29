@@ -24,7 +24,7 @@
 20) WebWorkers
 21) Created our own Double Clicked Event
 22) Created our own Double Clicked Event and show animation inside a div to understand browser properties
-23) Array Function Polyfills - map, find, filter, reduce, every, some
+23) Array Function Polyfills - map, find, filter, reduce, every, some, sort through mergeSort (time complexity - O(nlogn))
 24) Kinetic Animation Loader
 25) Social Media Increment Counter
 26) Closures
