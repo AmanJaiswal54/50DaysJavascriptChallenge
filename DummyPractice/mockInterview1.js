@@ -33,6 +33,19 @@ console.log(
   })
 );
 
+// Explaination
+// [...] the array is sorted according to each character's Unicode code point value, according to the string conversion of each element.
+// console.log("104".charCodeAt(0));
+// console.log("99".charCodeAt(0));
+//Note that we only look at the first index of the number "charCodeAt(  0  )"
+// This returns: "49, 57".
+// 49 (unicode value of first number at 104)
+// 57 (unicode value of first number at 99)
+
+// sort() does sorting by only looking at the first index of the numbers.
+// sort() does not care if a whole number is bigger than another, it compares the value of the unicode of the digits,
+// and if there are two equal unicode values, then it checks if there is a next digit and compares it as well.
+
 // -----------------------------
 
 // Difference between Slice and Splice.
@@ -51,8 +64,8 @@ console.log("splice", a, b);
 // Hoisting Snippet
 let a = 10;
 {
-    console.log('Start');
-	console.log(a);
-    console.log('End');
-	let a = 20;
+  console.log("Start");
+  console.log(a);
+  console.log("End");
+  let a = 20;
 }
