@@ -126,7 +126,7 @@ console.log(add(1)(2)(3)(4).getValue());
 // Currying via Closures Questions
 // https://theanubhav.com/2019/02/03/js-currying-in-interview/#add234-and-add234-usage-in-same-function
 
-
+// vs
 // nested functions
 
 const compose = (sum2, sum1) => (x) => sum2(sum1(x));
