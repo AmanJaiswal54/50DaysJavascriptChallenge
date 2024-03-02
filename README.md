@@ -29,5 +29,5 @@
 25) Kinetic Animation Loader
 26) Social Media Increment Counter
 27) Closures
-28) Asynchronous ways in Javascript
+28) Asynchronous ways in Javascript (callbacks, Promises)
 29) 
