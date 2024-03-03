@@ -1,4 +1,4 @@
-// consume and produce promises
+// promises can be consume and produce
 // .then, .catch is use to consume the promise
 // new Promise is use to produce promise
 
