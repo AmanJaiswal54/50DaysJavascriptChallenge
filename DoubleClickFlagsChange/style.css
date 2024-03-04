@@ -5,12 +5,27 @@
 body {
   overflow: hidden;
 }
+
 .container {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
+}
+
+.row {
+  background-color: black;
+  color: white;
+  width: 0;
+  text-align: center;
+  opacity: 0;
+  transition: width 1s linear, opacity 1s ease;
+}
+
+.row.active {
+  width: 300px;
+  opacity: 1;
 }
 
 .container.germany {
