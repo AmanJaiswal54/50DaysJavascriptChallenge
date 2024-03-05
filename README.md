@@ -31,4 +31,5 @@
 27) Closures
 28) Asynchronous ways in Javascript (callbacks, Promises)
 29) Consume and Produce Promises
-30) Double click Countries Flag Change
+30) Double click Countries Flag Change + Name Animation
+31) 
