@@ -31,7 +31,6 @@ console.log("obj1", obj1);
 console.log("obj2", obj2);
 
 // Constructor Function
-
 function Parent(name) {
   this.name = name;
 }
@@ -68,3 +67,23 @@ obj5.accounts.hdfc.savings = "-";
 console.log("obj3", obj3);
 console.log("obj4", obj4);
 console.log("obj5", obj5);
+
+// -----------------------------
+
+// interchange Object keys-values to values-keys
+let obj6 = {
+  name1: "julie",
+  name2: "anna",
+  name3: "robert",
+  name4: "adam",
+  name: "satya",
+};
+
+let keys = Object.keys(obj6);
+let values = Object.values(obj6);
+let obj7 = {};
+for (let i = 0; i < keys.length; i++) {
+  obj7[values[i]] = keys[i];
+}
+console.log("obj6", obj6);
+console.log("obj7", obj7);
