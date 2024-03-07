@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  background-color: yellow;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box.active {
+  background-color: green;
+}
