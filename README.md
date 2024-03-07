@@ -33,3 +33,4 @@
 29) Consume and Produce Promises
 30) Double click Countries Flag Change + Name Animation
 31) Linkedin Like, Support, Help
+32) Animated Queue - Interview Question
