@@ -30,7 +30,8 @@
 26) Social Media Increment Counter
 27) Closures
 28) Asynchronous ways in Javascript (callbacks, Promises)
-29) Consume and Produce Promises
+29) **a)** Consume and Produce Promises
+    **b)** Difference between promise.then(success, error) and promise.then(success).catch(error)
 30) Double click Countries Flag Change + Name Animation
 31) Linkedin Like, Support, Help
 32) Animated Queue - Interview Question
