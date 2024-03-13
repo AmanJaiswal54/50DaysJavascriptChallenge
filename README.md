@@ -32,6 +32,7 @@
 28) Asynchronous ways in Javascript (callbacks, Promises)
 29) **a)** Consume and Produce Promises
     **b)** Difference between promise.then(success, error) and promise.then(success).catch(error)
+    **c)** Added Promise api's -- all, allSettled, race, any
 30) Double click Countries Flag Change + Name Animation
 31) Linkedin Like, Support, Help
 32) Animated Queue - Interview Question
