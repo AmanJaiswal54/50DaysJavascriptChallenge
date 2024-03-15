@@ -87,3 +87,18 @@ for (let i = 0; i < keys.length; i++) {
 }
 console.log("obj6", obj6);
 console.log("obj7", obj7);
+
+// -----------------------------
+
+// What will be the output
+let str = "b" + "a" + +"a" + "a";
+str.toLowerCase();
+console.log(str.toLowerCase()); //banana
+
+// -----------------------------
+
+// create a div parent and child1 div(with some text) html tag
+// Now using parent div as reference I want you to create another child2 div from JS and insert inside parent at the bottom
+// Ultimately need to use insertAdjacentHTML("beforeend", <div class="child2">Child 2</div>)
+
+// -----------------------------
