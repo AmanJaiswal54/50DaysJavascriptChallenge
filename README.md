@@ -1,6 +1,6 @@
 # 50DaysJavascriptChallenge
 
-1) DummyPractice 1, 2
+1) DummyPractice 1, 2, 
 2) How to Center a div using display: flex;
 3) Expanding Cards
 4) Progress Steps
