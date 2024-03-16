@@ -1,5 +1,5 @@
 import COLORS from "./const.js";
-const TOTAL_SQUARES = 400;
+const TOTAL_SQUARES = 528;
 
 const container = document.querySelector('.container');
 const virtalContainer = document.createDocumentFragment();
