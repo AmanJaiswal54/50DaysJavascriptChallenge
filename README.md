@@ -38,3 +38,4 @@
 32) Animated Queue - Interview Question
 33) Created CRP, render blocking and parser blocking example
 34) Created Hover Board
+35) Created Nav Bar
