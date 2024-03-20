@@ -1,76 +1,76 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-    background-color: rgb(66, 119, 212);
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(66, 119, 212);
+  color: white;
 }
 
 .title {
-    font-size: 5vh;
-    margin: 15px;
+  font-size: 5vh;
+  margin: 15px;
 }
 
 .description {
-    font-size: 3vh;
-    margin: 15px;
+  font-size: 3vh;
+  margin: 15px;
 }
 
 .container {
-    background-color: white;
-    border: 5px solid blue;
-    width: 150px;
-    height: 325px;
-    margin: 15px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    position: relative;
+  background-color: white;
+  border: 5px solid blue;
+  width: 150px;
+  height: 325px;
+  margin: 15px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
 }
 
 .water-level {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 142px;
-    height: 0px;
-    background-color: rgb(1, 92, 239);
-    border-bottom-left-radius: 26px;
-    border-bottom-right-radius: 26px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 142px;
+  height: 0px;
+  background-color: rgb(1, 92, 239);
+  border-bottom-left-radius: 26px;
+  border-bottom-right-radius: 26px;
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 350px;
 }
 
 .small {
-    background-color: white;
-    border: 5px solid blue;
-    width: 50px;
-    height: 80px;
-    margin: 15px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    position: relative;
+  background-color: white;
+  border: 5px solid blue;
+  width: 50px;
+  height: 80px;
+  margin: 15px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
 }
 
 .small-water-level {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 42px;
-    height: 100%;
-    background-color: rgb(1, 92, 239);
-    border-bottom-left-radius: 26px;
-    border-bottom-right-radius: 26px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 42px;
+  height: 100%;
+  background-color: rgb(1, 92, 239);
+  border-bottom-left-radius: 26px;
+  border-bottom-right-radius: 26px;
 }
