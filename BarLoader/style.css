@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.bar-loader {
+  position: absolute;
+  border-top: 5px solid;
+  border-image: linear-gradient(
+      to bottom,
+      #bcbcbc 25%,
+      #ffcd02 25%,
+      #ffcd02 50%,
+      #e84f47 50%,
+      #e84f47 75%,
+      #65c1ac 75%
+    )
+    5;
+  width: 50%;
+  animation: translateLine 2s linear infinite;
+}
+
+@keyframes translateLine {
+  0% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
