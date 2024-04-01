@@ -44,4 +44,4 @@
 37) Bar Loader
 38) DadJokes with API
 39) Double Click Ripple Effect
-40) 
+40) Double Click Ripple Effect in Button
