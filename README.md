@@ -46,3 +46,4 @@
 39) Double Click Ripple Effect
 40) Double Click Ripple Effect in Button
 41) Sidebar
+42) Add Panel(similar to Onenote)
