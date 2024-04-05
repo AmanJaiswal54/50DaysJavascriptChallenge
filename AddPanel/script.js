@@ -154,10 +154,22 @@ const detail = document.querySelector(".detail");
 const addBtn = document.querySelector(".addBtn");
 addBtn.addEventListener("click", function (e) {
   let color = COLORS[Math.floor(Math.random() * COLORS.length)];
+  // create newTabs
   const newPanel = document.createElement("div");
   newPanel.classList.add("tab");
   newPanel.innerHTML = "Tab";
   newPanel.style.backgroundColor = color;
+  newPanel.addEventListener("click", showPanelDetail);
+  newPanel.addEventListener("dblclick", closePanel);
   container.appendChild(newPanel);
   detail.style.backgroundColor = color;
 });
+
+function showPanelDetail() {
+  detail.style.backgroundColor = this.style.backgroundColor;
+}
+
+function closePanel() {
+  this.remove();
+  detail.style.backgroundColor = "white";
+}
