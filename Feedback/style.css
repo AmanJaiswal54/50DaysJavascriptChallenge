@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: beige;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  filter: drop-shadow(0 0 3px black);
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  &.hide {
+    display: none;
+  }
+}
+
+.question {
+  text-align: center;
+  flex-wrap: nowrap;
+  width: 60%;
+  height: 25%;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.emojis {
+  height: 33%;
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.emoji {
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+    transition: transform 0.2s ease;
+  }
+}
+
+.emojis > .emoji.active {
+  transform: scale(1.5);
+}
+
+.reviewbtn {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.thankyou {
+  display: none;
+  &.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.heart-emoji {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.welcome {
+  text-align: center;
+  flex-wrap: nowrap;
+  width: 60%;
+  height: 25%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.feedback-result {
+  text-align: center;
+  flex-wrap: nowrap;
+  width: 60%;
+  height: 25%;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.conclude {
+  text-align: center;
+  flex-wrap: nowrap;
+  width: 60%;
+  height: 25%;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
