@@ -1,3 +1,7 @@
+// resources - https://www.codinn.dev/tricky-javascript/es6789-code-snippets-interview-questions
+
+// -----------------------------
+
 // calculate sum from 1 to 100;
 // brute force, time complexity - O(n)
 let sum = 0;
@@ -100,5 +104,30 @@ console.log(str.toLowerCase()); //banana
 // create a div parent and child1 div(with some text) html tag
 // Now using parent div as reference I want you to create another child2 div from JS and insert inside parent at the bottom
 // Ultimately need to use insertAdjacentHTML("beforeend", <div class="child2">Child 2</div>)
+
+// -----------------------------
+
+// input array
+const arr1 = [0, 1, 2, [3, 4, [5, 6, 7, [8, 9, "10", {name: 'rahul'}]]]];
+
+Array.prototype.myflat = function () {
+  const inputArr = this;
+  let outputArr = [];
+  function flatten(arr) {
+    for (let i = 0;i<arr.length; i++) {
+      if(typeof arr[i] === 'number' || typeof arr[i] === 'string') {
+      outputArr.push(Number(arr[i]))
+      } else if(typeof arr[i] === 'object' && Object.keys(arr[i]).length > 0 && !Array.isArray(arr[i])) {
+        outputArr.push(arr[i][Object.keys(arr[i])])
+      }else{
+        flatten(arr[i]);
+      }
+    }
+  }
+  flatten(inputArr);
+  console.log('outputArr', outputArr);
+}
+
+arr1.myflat(); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'rahul'];
 
 // -----------------------------
