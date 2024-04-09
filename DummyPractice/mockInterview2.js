@@ -107,9 +107,9 @@ console.log(str.toLowerCase()); //banana
 
 // -----------------------------
 
-// input array
-const arr1 = [0, 1, 2, [3, 4, [5, 6, 7, [8, 9, "10", {name: 'rahul'}]]]];
 
+const arr1 = [0, 1, 2, [3, 4, [5, 6, 7, [8, 9, "10", {name: 'rahul'}]]]];
+// array flat polyfill
 Array.prototype.myflat = function () {
   const inputArr = this;
   let outputArr = [];
@@ -129,5 +129,25 @@ Array.prototype.myflat = function () {
 }
 
 arr1.myflat(); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'rahul'];
+
+// -----------------------------
+
+// array flat function
+
+function flatten(arr) {
+  let out = []
+  for (let i = 0;i<arr.length; i++) {
+    if(typeof arr[i] === 'number' || typeof arr[i] === 'string') {
+      out.push(Number(arr[i]))
+    } else if(typeof arr[i] === 'object' && Object.keys(arr[i]).length > 0 && !Array.isArray(arr[i])) {
+      out.push(arr[i][Object.keys(arr[i])])
+    }else{
+      return flatten([...out, ...arr[i]]);
+    }
+  }
+  console.log(out)
+}
+flatten(arr1); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'rahul'];
+
 
 // -----------------------------
