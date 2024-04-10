@@ -151,3 +151,21 @@ flatten(arr1); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'rahul'];
 
 
 // -----------------------------
+
+// palindrome
+
+let str1 = "rac e car";
+let str2 = "nitin";
+let str3 = "Rama";
+
+function palindrome(str) {
+    let output_str = ''
+  for (let i = str.length-1; i >= 0; i--) {
+    output_str = output_str + str[i];
+  }
+  console.log(`${str} === ${output_str}: ${output_str === str}`);
+}
+
+palindrome(str1);
+palindrome(str2);
+palindrome(str3);
