@@ -49,3 +49,4 @@
 42) Add Panel(similar to Onenote)
 43) Feedback
 44) DSA- Anagram, Palindrome
+45) Search input and Highlight paragraph
