@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  color: black;
+}
+
+.add-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 80px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.notes-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  top: 50px;
+  width: 100vw;
+}
+
+.note {
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.textarea-container {
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+}
+
+.save-btn,
+.delete-btn {
+  height: 20px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: green;
+}
+.delete-btn {
+  background-color: red;
+}
