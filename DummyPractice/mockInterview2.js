@@ -107,26 +107,29 @@ console.log(str.toLowerCase()); //banana
 
 // -----------------------------
 
-
-const arr1 = [0, 1, 2, [3, 4, [5, 6, 7, [8, 9, "10", {name: 'rahul'}]]]];
+const arr1 = [0, 1, 2, [3, 4, [5, 6, 7, [8, 9, "10", { name: "rahul" }]]]];
 // array flat polyfill
 Array.prototype.myflat = function () {
   const inputArr = this;
   let outputArr = [];
   function flatten(arr) {
-    for (let i = 0;i<arr.length; i++) {
-      if(typeof arr[i] === 'number' || typeof arr[i] === 'string') {
-      outputArr.push(Number(arr[i]))
-      } else if(typeof arr[i] === 'object' && Object.keys(arr[i]).length > 0 && !Array.isArray(arr[i])) {
-        outputArr.push(arr[i][Object.keys(arr[i])])
-      }else{
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] === "number" || typeof arr[i] === "string") {
+        outputArr.push(Number(arr[i]));
+      } else if (
+        typeof arr[i] === "object" &&
+        Object.keys(arr[i]).length > 0 &&
+        !Array.isArray(arr[i])
+      ) {
+        outputArr.push(arr[i][Object.keys(arr[i])]);
+      } else {
         flatten(arr[i]);
       }
     }
   }
   flatten(inputArr);
-  console.log('outputArr', outputArr);
-}
+  console.log("outputArr", outputArr);
+};
 
 arr1.myflat(); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'rahul'];
 
@@ -135,20 +138,23 @@ arr1.myflat(); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'rahul'];
 // array flat function
 
 function flatten(arr) {
-  let out = []
-  for (let i = 0;i<arr.length; i++) {
-    if(typeof arr[i] === 'number' || typeof arr[i] === 'string') {
-      out.push(Number(arr[i]))
-    } else if(typeof arr[i] === 'object' && Object.keys(arr[i]).length > 0 && !Array.isArray(arr[i])) {
-      out.push(arr[i][Object.keys(arr[i])])
-    }else{
+  let out = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number" || typeof arr[i] === "string") {
+      out.push(Number(arr[i]));
+    } else if (
+      typeof arr[i] === "object" &&
+      Object.keys(arr[i]).length > 0 &&
+      !Array.isArray(arr[i])
+    ) {
+      out.push(arr[i][Object.keys(arr[i])]);
+    } else {
       return flatten([...out, ...arr[i]]);
     }
   }
-  console.log(out)
+  console.log(out);
 }
 flatten(arr1); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'rahul'];
-
 
 // -----------------------------
 
@@ -159,8 +165,8 @@ let str2 = "nitin";
 let str3 = "Rama";
 
 function palindrome(str) {
-    let output_str = ''
-  for (let i = str.length-1; i >= 0; i--) {
+  let output_str = "";
+  for (let i = str.length - 1; i >= 0; i--) {
     output_str = output_str + str[i];
   }
   console.log(`${str} === ${output_str}: ${output_str === str}`);
@@ -170,48 +176,74 @@ palindrome(str1);
 palindrome(str2);
 palindrome(str3);
 
-
 // -----------------------------
 
 // Anagram
 
 function anagram(str1, str2) {
-
   if (str1.length !== str2.length) {
     return "Not an Anagram";
   }
 
   let obj1 = {};
   let obj2 = {};
-  for(let i=0;i<str1.length;i++) {
-    if(!obj1[str1[i]]) {
-      obj1[str1[i]] = 1; 
+  for (let i = 0; i < str1.length; i++) {
+    if (!obj1[str1[i]]) {
+      obj1[str1[i]] = 1;
     } else {
       obj1[str1[i]] = obj1[str1[i]] + 1;
     }
   }
 
-  for(let i=0;i<str2.length;i++) {
-    if(!obj2[str2[i]]) {
-      obj2[str2[i]] = 1; 
+  for (let i = 0; i < str2.length; i++) {
+    if (!obj2[str2[i]]) {
+      obj2[str2[i]] = 1;
     } else {
       obj2[str2[i]] = obj2[str2[i]] + 1;
     }
   }
 
-  for(let i=0;i<str1.length;i++) {
-    if(obj2[str1[i]] !== obj1[str1[i]]) {
+  for (let i = 0; i < str1.length; i++) {
+    if (obj2[str1[i]] !== obj1[str1[i]]) {
       return "Not an Anagram";
     }
   }
 
-  for(let i=0;i<str2.length;i++) {
-    if(obj2[str2[i]] !== obj1[str2[i]]) {
+  for (let i = 0; i < str2.length; i++) {
+    if (obj2[str2[i]] !== obj1[str2[i]]) {
       return "Not an Anagram";
     }
   }
 
-  return 'Its an anagram'
+  return "Its an anagram";
 }
 
 console.log(anagram("cheater", "teacher"));
+
+// -----------------------------
+
+// Fibonnaci using Closures
+
+function parent() {
+  let initialValue1 = 0;
+  let initialValue2 = 1;
+  return function () {
+    let oldInitialValue1 = initialValue1;
+    let oldInitialValue2 = initialValue2;
+
+    initialValue1 = oldInitialValue2;
+    initialValue2 = oldInitialValue1 + oldInitialValue2;
+
+    return initialValue2;
+  };
+}
+
+let Fibonnaci = parent();
+console.log(Fibonnaci()); // 1
+console.log(Fibonnaci()); // 2
+console.log(Fibonnaci()); // 3
+console.log(Fibonnaci()); // 5
+console.log(Fibonnaci()); // 8
+console.log(Fibonnaci()); // 13
+console.log(Fibonnaci()); // 21
+console.log(Fibonnaci()); // 34
