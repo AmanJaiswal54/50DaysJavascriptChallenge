@@ -48,7 +48,7 @@
 41) Sidebar
 42) Add Panel(similar to Onenote)
 43) Feedback
-44) DSA- Anagram, Palindrome
+44) DSA- Anagram, Palindrome, Fibonacci using Closures
 45) Search input and Highlight paragraph
 46) Search Input and Show JSON ListItems
 47) NoteApp
