@@ -52,5 +52,5 @@
 45) Search input and Highlight paragraph
 46) Search Input and Show JSON ListItems
 47) NoteApp
-48) Dummy
+48) Binary to Number Problem
 49) 
